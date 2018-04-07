@@ -16,7 +16,7 @@ public class Pizza : MonoBehaviour {
 	void Update () {
 		float h = Input.GetAxis ("Horizontal");
 		float v = Input.GetAxis ("Vertical");
-		transform.Translate (new Vector3 (h * Time.deltaTime, v * Time.deltaTime, 0));
+		transform.Translate (new Vector3 (h * (Time.deltaTime * vel), v * (Time.deltaTime * vel), 0));
 
 		if(Input.GetKeyDown(KeyCode.Space)){
 			Instantiate (pepperonis, new Vector3 (tiros.transform.position.x, tiros.transform.position.y, tiros.transform.position.z), tiros.transform.rotation);
