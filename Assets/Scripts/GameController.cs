@@ -1,23 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Collections;
 
-public class GameController : Pizza {
+public class GameController : MonoBehaviour
+{
+    //Propriedades
+    public float posX;
+    public float posYMin;
+    public float posYMax;
 
-    float posX = 0;
-    float posYmin = 0;
-    float posYmax = 0;
+    public Inimigo empada;
+  
+    float tempo = 5.0f;
 
-    public GameObject Inimigo;
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        //Instantiate(Inimigo, new Vector3(posX = transform.position.x, posYmin = transform.position.y, posYmax = transform.position.z), tiros.transform.rotation);
+    public void Start()
+    {
+
+
+    }
+    void Update()
+    {
+        tempo -= Time.deltaTime;
+        if (tempo < 0)
+        {
+            CriarNaveInimiga();
+            tempo = 5.0f;
+        }
+    }
+    //TODO (A fazer)
+    //Fazer nascer a cada x tempo
+
+    //Metodos
+    public void CriarNaveInimiga()
+    {
+        float posAleatoriaInimigo = Random.Range(posYMin, posYMax);
+        Vector3 vetor3Aleatorio = new Vector3(posX, posAleatoriaInimigo, 0.0f);
+        Instantiate(empada, vetor3Aleatorio, Quaternion.identity);
     }
 }

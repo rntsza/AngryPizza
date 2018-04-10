@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ceu1
   - tiros
+  - inimigos
   layers:
   - Default
   - TransparentFX
