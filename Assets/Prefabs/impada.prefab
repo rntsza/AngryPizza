@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212685095454596484}
   - component: {fileID: 50419893170188256}
   - component: {fileID: 60641294979800412}
+  - component: {fileID: 114263257794359316}
   m_Layer: 8
   m_Name: impada
   m_TagString: inimigos
@@ -200,6 +201,24 @@ PolygonCollider2D:
       - {x: 0.7, y: -3.06}
       - {x: 0.74, y: -3}
       - {x: 1.1999999, y: -3}
+--- !u!114 &114263257794359316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1045412107682882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb52926d45e8e174aa7beea2b7f04f9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posX: 17
+  posYMin: -3.33
+  posYMax: 3.33
+  impada: {fileID: 0}
+  vida: 2
+  alvosMortos: 0
+  velocidade: 200
 --- !u!212 &212685095454596484
 SpriteRenderer:
   m_ObjectHideFlags: 1
