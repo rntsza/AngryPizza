@@ -8,16 +8,17 @@ public class GameController : MonoBehaviour
     public float posX;
     public float posYMin;
     public float posYMax;
-
     public Inimigo empada;
-  
     float tempo = 5.0f;
+    
+    public AudioSource scene1;
+    bool mplay, mplaychange;
 
 
     public void Start()
     {
-
-
+        scene1 = GetComponent<AudioSource>();
+        mplay = true;
     }
     void Update()
     {
@@ -27,11 +28,28 @@ public class GameController : MonoBehaviour
             CriarNaveInimiga();
             tempo = 5.0f;
         }
-    }
-    //TODO (A fazer)
-    //Fazer nascer a cada x tempo
 
-    //Metodos
+        // Opções de BGM
+        if (mplay == true && mplaychange == true)
+        {
+            scene1.Play();
+            mplaychange = false;
+        }
+        if (mplay == false && mplaychange == true)
+        {
+            scene1.Stop();
+            mplaychange = false;
+        }
+    }
+    void OnGUI()
+    {
+        mplay = GUI.Toggle(new Rect(10, 10, 100, 30), mplay, "Play Music");
+
+        if (GUI.changed)
+        {
+            mplaychange = true;
+        }
+    }
     public void CriarNaveInimiga()
     {
         float posAleatoriaInimigo = Random.Range(posYMin, posYMax);

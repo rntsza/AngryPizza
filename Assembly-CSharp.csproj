@@ -56,6 +56,9 @@
      <Compile Include="Assets\Scripts\Parallax.cs" />
      <Compile Include="Assets\Scripts\Pizza.cs" />
      <Compile Include="Assets\Scripts\Tiros.cs" />
+ <Reference Include="Facebook.Unity.Settings">
+ <HintPath>C:/Users/reego/Documents/GitHub/PizzaPutassa/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
