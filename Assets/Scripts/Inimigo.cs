@@ -17,7 +17,7 @@ public class Inimigo : GameController
     //Componente
     Rigidbody2D rb;
 
-    public void Start()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.AddForce(Vector2.left * velocidade);
@@ -43,24 +43,4 @@ public class Inimigo : GameController
     {
         //TODO (A fazer)
     }
-
-    /*public void dificuldade()
-    {
-        if (alvosMortos >= 3)
-        {
-            base.timer = 2.0f;
-        }
-        else if (alvosMortos >= 4)
-        {
-            base.timer = 1.0f;
-        }
-        else if (alvosMortos > 5)
-        {
-            base.timer = 0.5f;
-        }
-        else
-        {
-            base.timer = 5.0f;
-        }
-    }*/
 }

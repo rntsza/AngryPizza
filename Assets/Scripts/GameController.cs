@@ -5,21 +5,20 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
     //Propriedades
-    public float posX;
-    public float posYMin;
-    public float posYMax;
-    public Inimigo empada;
+    public float posX = 17.0f;
+    public float posYMin = -3.33f;
+    public float posYMax = 3.33f;
+
+    public Inimigo impada;
+    //public GameObject empada;
     float tempo = 5.0f;
-    
-    public AudioSource scene1;
-    bool mplay, mplaychange;
 
 
-    public void Start()
+    /*public void Start()
     {
-        scene1 = GetComponent<AudioSource>();
-        mplay = true;
-    }
+
+
+    }*/
     void Update()
     {
         tempo -= Time.deltaTime;
@@ -28,32 +27,40 @@ public class GameController : MonoBehaviour
             CriarNaveInimiga();
             tempo = 5.0f;
         }
-
-        // Opções de BGM
-        if (mplay == true && mplaychange == true)
-        {
-            scene1.Play();
-            mplaychange = false;
-        }
-        if (mplay == false && mplaychange == true)
-        {
-            scene1.Stop();
-            mplaychange = false;
-        }
     }
-    void OnGUI()
+
+    
+    //TODO (A fazer)
+    //Fazer nascer a cada x tempo
+    public void dificuldade()
     {
-        mplay = GUI.Toggle(new Rect(10, 10, 100, 30), mplay, "Play Music");
+        //ToDo
 
-        if (GUI.changed)
+        /*
+        if (alvosMortos >= 3)
         {
-            mplaychange = true;
+            base.timer = 2.0f;
         }
+        else if (alvosMortos >= 4)
+        {
+            base.timer = 1.0f;
+        }
+        else if (alvosMortos > 5)
+        {
+            base.timer = 0.5f;
+        }
+        else
+        {
+            base.timer = 5.0f;
+        }*/
     }
+
+
+    //Metodos
     public void CriarNaveInimiga()
     {
         float posAleatoriaInimigo = Random.Range(posYMin, posYMax);
         Vector3 vetor3Aleatorio = new Vector3(posX, posAleatoriaInimigo, 0.0f);
-        Instantiate(empada, vetor3Aleatorio, Quaternion.identity);
+        Instantiate(impada, vetor3Aleatorio, Quaternion.identity);
     }
 }
