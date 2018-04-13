@@ -6,7 +6,7 @@ public class Azeitona : MonoBehaviour {
 
 	public float forca;
     public Rigidbody2D rb;
-	public float zRotation = 5.0f;
+	public float zRotation;
 	public GameObject azeitona;
 	// Use this for initialization
 	void Start () {
@@ -17,7 +17,7 @@ public class Azeitona : MonoBehaviour {
 	void FixedUpdate () {
 		rb.AddForce(transform.up * forca);
         zRotation--;
-        azeitona.transform.eulerAngles = new Vector3(10, 0, zRotation);
+        azeitona.transform.eulerAngles = new Vector3(0, 0, zRotation);
 
 
 	}
