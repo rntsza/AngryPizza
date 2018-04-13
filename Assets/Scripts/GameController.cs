@@ -8,17 +8,9 @@ public class GameController : MonoBehaviour
     public float posX = 17.0f;
     public float posYMin = -3.33f;
     public float posYMax = 3.33f;
-
     public Inimigo impada;
-    //public GameObject empada;
     float tempo = 5.0f;
-
-
-    /*public void Start()
-    {
-
-
-    }*/
+    public int pontos = 1;
     void Update()
     {
         tempo -= Time.deltaTime;

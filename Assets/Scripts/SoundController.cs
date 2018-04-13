@@ -28,7 +28,7 @@ public class SoundController : MonoBehaviour {
             startBMG = false;
 		}
 	}
-
+    /* 
 	void OnGUI()
     {
         bmgScene1 = GUI.Toggle(new Rect(10, 10, 100, 30), bmgScene1, "Play Music");
@@ -36,5 +36,5 @@ public class SoundController : MonoBehaviour {
         {
             startBMG = true;
         }
-	}
+	}   */
 }

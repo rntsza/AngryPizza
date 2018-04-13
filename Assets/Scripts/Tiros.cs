@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Tiros : MonoBehaviour {
 
-	public float vel = 2.5f;
+	public float vel = 10.5f;
 	// Use this for initialization
 	void Start () {
 		

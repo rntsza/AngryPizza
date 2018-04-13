@@ -10,6 +10,7 @@ public class Inimigo : GameController
     //float dropRate = 0.20f;
     public int alvosMortos = 0;
     public float velocidade;
+    public GameObject moeda;
 
     //TODO (A fazer)
     //Criar uma velocidade aleatória!!
@@ -34,13 +35,14 @@ public class Inimigo : GameController
             {
                 Destroy(this.gameObject);
                 alvosMortos++;
+                pontos++;
+                DroparItem();
                 Debug.Log("Alvo morto" + alvosMortos);
             }
         }
     }
-
     public void DroparItem()
     {
-        //TODO (A fazer)
+    //    Instantiate(moeda, salvarLocal, Quaternion.identity);
     }
 }
