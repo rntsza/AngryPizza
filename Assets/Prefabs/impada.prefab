@@ -219,6 +219,8 @@ MonoBehaviour:
   vida: 2
   alvosMortos: 0
   velocidade: 200
+  moeda: {fileID: 1900784894105830, guid: 6cb1f476e23fb7d43a79cf00c0efa5c4, type: 2}
+  pontuacao: 0
 --- !u!212 &212685095454596484
 SpriteRenderer:
   m_ObjectHideFlags: 1

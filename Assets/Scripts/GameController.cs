@@ -10,7 +10,7 @@ public class GameController : MonoBehaviour
     public float posYMax = 3.33f;
     public Inimigo impada;
     float tempo = 5.0f;
-    public int pontos = 1;
+    //public int pontos = 1;
     void Update()
     {
         tempo -= Time.deltaTime;

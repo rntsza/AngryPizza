@@ -375,7 +375,6 @@ MonoBehaviour:
   posYMin: -5.55
   posYMax: 4.88
   impada: {fileID: 114263257794359316, guid: a6b95c82bd11c4544b7f391fdd226dc0, type: 2}
-  pontos: 0
 --- !u!4 &576880799
 Transform:
   m_ObjectHideFlags: 0
@@ -540,9 +539,14 @@ MonoBehaviour:
   posX: 17
   posYMin: -3.33
   posYMax: 3.33
-  impada: {fileID: 0}
-  pontos: 0
+  impada: {fileID: 114263257794359316, guid: a6b95c82bd11c4544b7f391fdd226dc0, type: 2}
+  vida: 2
+  alvosMortos: 0
+  velocidade: 0
+  moeda: {fileID: 0}
+  pontuacao: 0
   Score: {fileID: 1981733603}
+  pontos: 
 --- !u!1 &892596114
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,6 +1492,7 @@ MonoBehaviour:
   tiro4: {fileID: 1986234031}
   pepperonis: {fileID: 1499726950896490, guid: f066743fbc7bbb941bdc7317add1a65d, type: 2}
   azeitona: {fileID: 1550911043610342, guid: ad36673250a386a4d991a32ade71a985, type: 2}
+  azeiQt: 4
 --- !u!1 &1753190792
 GameObject:
   m_ObjectHideFlags: 0

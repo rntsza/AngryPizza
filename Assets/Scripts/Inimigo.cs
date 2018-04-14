@@ -11,6 +11,7 @@ public class Inimigo : GameController
     public int alvosMortos = 0;
     public float velocidade;
     public GameObject moeda;
+	public int pontuacao;
 
     //TODO (A fazer)
     //Criar uma velocidade aleatória!!
@@ -35,8 +36,8 @@ public class Inimigo : GameController
             {
                 Destroy(this.gameObject);
                 alvosMortos++;
-                pontos++;
                 DroparItem();
+				pontuacao++;
                 Debug.Log("Alvo morto" + alvosMortos);
             }
         }
